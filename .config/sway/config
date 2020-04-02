@@ -16,7 +16,7 @@ set
 }
 
 #--- Font ------------------------------------------------------------------
-set $font	Hack 12
+set 	$font	Hack 12
 
 #--- GUI -------------------------------------------------------------------
 set
@@ -36,28 +36,28 @@ set
 #--- Window Decortations ---------------------------------------------------
 set
 {
-    $border      5
-    $nofocus     #282a36
-    $focus       #bd93f9
-    $titletxt    #f8f8f2
-    $titlepad    5
-    $gaps_inner  10
-    $gaps_outer  0
+   	$border      5
+  	$nofocus     #282a36
+	$focus       #bd93f9
+	$titletxt    #f8f8f2
+	$titlepad    5
+	$gaps_inner  10
+	$gaps_outer  0
 }
 
 #--- Workspace Names -------------------------------------------------------
 set
-{
-    $ws1  1
-    $ws2  2
-    $ws3  3
-    $ws4  4
-    $ws5  5
-    $ws6  6
-    $ws7  7
-    $ws8  8
-    $ws9  9
-    $ws10 10
+{	
+	$ws1  1
+	$ws2  2
+	$ws3  3
+	$ws4  4
+	$ws5  5
+	$ws6  6
+	$ws7  7
+	$ws8  8
+	$ws9  9
+	$ws10 10
 }
 
 #]>#########################################################################
@@ -72,8 +72,8 @@ input * xkb_layout "de"
 
 input "1739:10036:Synaptics_s3203"
 {
-    tap enabled
-    middle_emulation enabled
+	tap enabled
+	middle_emulation enabled
 }
 
 #]>#########################################################################
