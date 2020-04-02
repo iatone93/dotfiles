@@ -1,0 +1,89 @@
+* {
+    border: none;
+    border-radius: 0;
+    font-family: "Hack";
+    font-size: 15px;
+    min-height: 0;
+}
+
+window#waybar{
+    background: #282a36;
+    border-top: 3px solid #282a36;
+    color: #f8f8f2;
+}
+
+#window {
+    font-weight: bold;
+    font-family: "Hack";
+    color: #f8f8f2;
+}
+
+#workspaces button {
+    padding: 0 5px;
+    background: transparent;
+    font-family: "Hack";
+    color: #f8f8f2;
+    border-top: 2px solid transparent;
+}
+
+#workspaces button.focused {
+    color: #bd93f9;
+    border-top: 2px solid #bd93f9;
+}
+
+#mode {
+}
+
+#clock, #battery, #cpu, #memory, #network, #pulseaudio, #idle_inhibitor, #tray, #mode {
+    padding: 0px 7px;
+    margin: 0 3px;
+}
+
+#clock {
+   font-weight: bold;
+}
+
+#battery {
+}
+
+#battery icon {
+    color: red;
+}
+
+#battery.charging {
+    color: lightgreen;
+}
+
+#battery.warning:not(.charging) {
+    color: yellow;
+}
+
+#battery.critical:not(.charging) {
+    color: red;
+}
+
+#cpu {
+}
+
+#memory {
+}
+
+#network {
+}
+
+#network.disconnected {
+    background: red;
+}
+
+#pulseaudio {
+}
+
+#pulseaudio.muted {
+}
+
+#tray {
+}
+
+#idle_inhibitor.activated {
+  color: #bd93f9;
+}

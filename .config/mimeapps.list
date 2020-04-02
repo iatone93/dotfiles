@@ -1,0 +1,8 @@
+
+[Default Applications]
+application/pdf=org.gnome.Evince.desktop
+image/jpeg=imv.desktop
+image/jpg=imv.desktop
+image/png=imv.desktop
+image/gif=imv.desktop
+audio/mpeg=mpv.desktop
