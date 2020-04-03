@@ -3,8 +3,8 @@
     "position": "top", // Waybar at the bottom of your screen
     "height": 30, // Waybar height
     "modules-left": ["sway/workspaces", "sway/mode"],
-    "modules-center": ["sway/window"],
-    "modules-right": ["idle_inhibitor", "pulseaudio", "network", "battery", "clock", "tray"],
+    "modules-center": ["clock"],
+    "modules-right": ["idle_inhibitor", "pulseaudio", "network", "battery", "tray"],
 
     "sway/workspaces": {
        "disable-scroll": true,
@@ -22,34 +22,36 @@
     },
 
     "clock": {
-        "format-alt": "{:%d.%m.%Y}",
+        // Human Friendly
+        "format": "{:%A, %d %B - %H:%M}",
         "tooltip": false
     },
 
     "battery": {
         "bat": "BAT0",
         "states": {
-            // "good": 95,
+            "full": 100,
+            "good": 95,
             "warning": 30,
             "critical": 15
         },
-        "format": "{capacity}% {icon}",
-        // "format-good": "", // An empty format will hide the module
-        // "format-full": "",
+        "format": "{icon}",
+        //"format-good": "", // An empty format will hide the module
+        //"format-full": "",
         "format-icons": ["", "", "", "", ""]
     },
 
     "network": {
         "interface": "wlp2s0", // (Optional) To force the use of this interface
-        "format-wifi": "{essid}({signalStrength}%) ",
-        "format-ethernet": "{ifname}: {ipaddr}/{cidr} ",
-        "format-disconnected": "Disconnected ⚠",
-        "tooltip": false
+        "format-wifi": "",
+        "format-ethernet": "{ifname} ",
+        "format-disconnected": "", //An empty format will hide the module.
+        "tooltip-format-wifi": "{essid} ({signalStrength}%) "
     },
 
     "pulseaudio": {
         //"scroll-step": 1,
-        "format": "{volume}% {icon}",
+        "format": "{icon} {volume}%",
         "format-bluetooth": "{volume}% {icon}",
         "format-muted": "",
         "format-icons": {
