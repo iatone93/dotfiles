@@ -12,13 +12,12 @@ window#waybar{
 }
 
 #window {
-    font-weight: bold;
     font-family: "Hack";
     color: #f8f8f2;
 }
 
 #workspaces button {
-    padding: 0 5px;
+    padding: 0 15px;
     background: transparent;
     font-family: "Hack";
     font-weight: bold;
@@ -26,14 +25,16 @@ window#waybar{
 }
 
 #workspaces button.focused {
-    color: #bd93f9;
+    color: #f8f8f2;
+    background: #bd93f9;
 }
 
 #mode {
+    color: lightgreen;
 }
 
-#clock, #battery, #cpu, #memory, #network, #pulseaudio, #idle_inhibitor, #tray, #mode {
-    padding: 0px 9px;
+#clock, #battery, #cpu, #memory, #network, #pulseaudio, #idle_inhibitor, #tray, #workspaces, #window {
+    padding: 0px 12px;
     margin: 0 3px;
 }
 
@@ -42,10 +43,6 @@ window#waybar{
 }
 
 #battery {
-}
-
-#battery icon {
-    color: red;
 }
 
 #battery.charging:not(.full) {

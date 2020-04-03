@@ -16,7 +16,7 @@ set
 }
 
 #--- Font ------------------------------------------------------------------
-set $font			Hack 12
+set $font			Hack 16
 
 #--- GUI -------------------------------------------------------------------
 set
@@ -36,27 +36,27 @@ set
 #--- Window Decortations ---------------------------------------------------
 set
 {
-   	$border      	3
+   	$border      	2
   	$nofocus     	#282a36
 	$focus       	#bd93f9
 	$titletxt    	#f8f8f2
-	$titlepad    	5
-	$gaps_inner  	10
+	$titlepad    	10
+	$gaps_inner  	20
 	$gaps_outer  	0
 }
 
 #--- Workspace Names -------------------------------------------------------
 set
 {
-	$ws1  1
-	$ws2  2
-	$ws3  3
-	$ws4  4
-	$ws5  5
-	$ws6  6
-	$ws7  7
-	$ws8  8
-	$ws9  9
+	$ws1 1
+	$ws2 2
+	$ws3 3
+	$ws4 4
+	$ws5 5
+	$ws6 6
+	$ws7 7
+	$ws8 8
+	$ws9 9
 	$ws10 10
 }
 
@@ -132,6 +132,19 @@ hide_edge_borders		smart_no_gaps
 #]>#########################################################################
 
 #<[# SPECIAL WINDOW RULES ##################################################
+#--- Floating Rules --------------------------------------------------------
+for_window [title="Anki"] floating enable
+for_window [title="Bitwarden"] floating enable
+for_window [title="Laufwerke"] floating enable
+for_window [title="mpv"] floating enable
+for_window [title="imv"] floating enable
+for_window [title="Steam"] floating enable
+for_window [title="Alacritty"] floating enable
+for_window [title="Taschenrechner"] floating enable
+
+#--- Workspace Assignment --------------------------------------------------
+for_window [title="Mozilla Firefox"] move window to workspace $ws3
+for_window [class="Spotify"] move window to workspace $ws4
 
 #]>#########################################################################
 
@@ -209,16 +222,16 @@ bindsym
 mode "resize" {
     bindsym
     {
-	h 		resize shrink width 10px
-	j 		resize shrink height 10px
-	k 		resize grow height 10px
-	l 		resize grow width 10px
-	Left 	resize shrink width 10px
-	Down 	resize shrink height 10px
-	Up 		resize grow height 10px
-	Right	resize grow width 10px
-	Return 	mode "default"
-	Escape 	mode "default"
+		h 		resize shrink width 10px
+		j 		resize shrink height 10px
+		k 		resize grow height 10px
+		l 		resize grow width 10px
+		Left 	resize shrink width 10px
+		Down 	resize shrink height 10px
+		Up 		resize grow height 10px
+		Right	resize grow width 10px
+		Return 	mode "default"
+		Escape 	mode "default"
     }
 }
 
@@ -249,5 +262,3 @@ bindsym
 }
 
 #]>#########################################################################
-
-include /etc/sway/config.d/*
