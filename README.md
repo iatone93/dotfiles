@@ -1,2 +1,2 @@
 # dotfiles
-[Noelle](sway_noelle.png)
+![Noelle](sway_noelle.png)
