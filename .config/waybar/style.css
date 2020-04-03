@@ -7,8 +7,7 @@
 }
 
 window#waybar{
-    background: #282a36;
-    border-top: 3px solid #282a36;
+    background: rgba(40, 42, 54, 0.8);
     color: #f8f8f2;
 }
 
@@ -22,25 +21,24 @@ window#waybar{
     padding: 0 5px;
     background: transparent;
     font-family: "Hack";
+    font-weight: bold;
     color: #f8f8f2;
-    border-top: 2px solid transparent;
 }
 
 #workspaces button.focused {
     color: #bd93f9;
-    border-top: 2px solid #bd93f9;
 }
 
 #mode {
 }
 
 #clock, #battery, #cpu, #memory, #network, #pulseaudio, #idle_inhibitor, #tray, #mode {
-    padding: 0px 7px;
+    padding: 0px 9px;
     margin: 0 3px;
 }
 
 #clock {
-   font-weight: bold;
+    font-weight: bold;
 }
 
 #battery {
@@ -50,7 +48,7 @@ window#waybar{
     color: red;
 }
 
-#battery.charging {
+#battery.charging:not(.full) {
     color: lightgreen;
 }
 
@@ -72,7 +70,6 @@ window#waybar{
 }
 
 #network.disconnected {
-    background: red;
 }
 
 #pulseaudio {
@@ -85,5 +82,5 @@ window#waybar{
 }
 
 #idle_inhibitor.activated {
-  color: #bd93f9;
+    color: #bd93f9;
 }
