@@ -7,6 +7,12 @@
     "modules-right": ["tray", "idle_inhibitor", "pulseaudio", "network", "battery"],
 
    "sway/workspaces": {
+       "persistent_workspaces": {
+           "1": [],
+           "2": [],
+           "3": [],
+           "4": []
+       },
         "format-default": "{name}",
         "format": "{icon}",
         "format-icons": {

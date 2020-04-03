@@ -10,7 +10,7 @@
 set
 {
 	$term			alacritty
-	$lock 			swaylock -e -i ~/.config/sway/succulent.jpg
+	$lock 			swaylock -e -i ~/.config/sway/bakaasta.png
 	$launcher		rofi  -show drun -hide-scrollbar
 	$screenshot		grim ~/Bilder/screenshot-$(date +"%Y-%m-%d-%H-%M-%S").png
 }
@@ -63,7 +63,7 @@ set
 #]>#########################################################################
 
 #<[# OUTPUTS ###############################################################
-output "*" bg ~/.config/sway/succulent.jpg fill
+output "*" bg ~/.config/sway/bakaasta.png fill
 
 #]>#########################################################################
 
