@@ -6,12 +6,15 @@
 # Wayland is sane. Use it.
 
 #<[# QUICK SETTINGS ########################################################
+#--- Include --------------------------------------------------------------
+include dracula
+
 #--- Programs --------------------------------------------------------------
 set
 {
 	$term			alacritty
-	$lock 			swaylock -f -e -i ~/.config/sway/noelle2.png
-	$launcher		rofi  -show drun
+	$lock 			swaylock -f -e -i ~/.config/sway/noelle_lock.png
+	$launcher		wofi --show drun -f -I -i
 	$screenshot		grim ~/Bilder/screenshot-$(date +"%Y-%m-%d-%H-%M-%S").png
 }
 
@@ -37,9 +40,9 @@ set
 set
 {
    	$border      	3
-  	$nofocus     	#282a36
-	$focus       	#bd93f9
-	$titletxt    	#f8f8f2
+  	$nofocus     	$background
+	$focus       	$purple
+	$titletxt    	$foreground
 	$titlepad    	10
 	$gaps_inner  	20
 	$gaps_outer  	0
@@ -63,7 +66,7 @@ set
 #]>#########################################################################
 
 #<[# OUTPUTS ###############################################################
-output "*" bg ~/.config/sway/noelle1.png fill
+output "*" bg ~/.config/sway/noelle.png fill
 
 #]>#########################################################################
 
@@ -81,9 +84,9 @@ input "1739:10036:Synaptics_s3203"
 #<[# STARTUP ###############################################################
 exec swayidle -w \
 	timeout 300 	'$lock' \
-    timeout 600	'swaymsg "output * dpms off"' \
-	resume		'swaymsg "output * dpms on"' \
-	timeout 900 'systemctl suspend'\
+    timeout 600		'swaymsg "output * dpms off"' \
+	resume			'swaymsg "output * dpms on"' \
+	timeout 900 	'systemctl suspend'\
     before-sleep	'$lock'
 
 exec_always
@@ -128,7 +131,6 @@ title_align center
 #--- Default Borders -------------------------------------------------------
 default_floating_border	normal $border
 default_border			pixel  $border
-hide_edge_borders		smart_no_gaps
 
 #]>#########################################################################
 
@@ -144,8 +146,6 @@ for_window [title="Alacritty"] floating enable
 for_window [title="Taschenrechner"] floating enable
 
 #--- Workspace Assignment --------------------------------------------------
-for_window [title="Mozilla Firefox"] move window to workspace $ws3
-for_window [class="Spotify"] move window to workspace $ws4
 
 #]>#########################################################################
 

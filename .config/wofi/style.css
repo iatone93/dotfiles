@@ -1,0 +1,40 @@
+window {
+    margin: 5px;
+    padding: 5px;
+    background-color:  #282a36;
+    font-family: "Hack";
+    }
+    
+    #input {
+    background-color:  #282a36;
+    color: #f8f8f2;
+    border: 0px solid  #282a36;
+    }
+    
+    #input:focus {
+    background-color: #44475a;
+    color: #f8f8f2;
+    border: 0px solid   #282a36;
+    }
+    
+    #inner-box {
+    background-color:  #282a36;
+    }
+    
+    #inner-box flowboxchild:focus {
+    background-color: #44475a
+    }
+    
+    #outer-box {
+    background-color:  #282a36;
+    }
+    
+    #scroll {
+    background-color: #282a36;
+    }
+    
+    #text {
+    margin: 2px;
+    background-color: rgba(0,0,0,0);
+    color: #f8f8f2;
+    }

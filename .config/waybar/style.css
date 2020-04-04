@@ -1,3 +1,5 @@
+@import 'dracula.css';
+
 * {
     border: none;
     border-radius: 0;
@@ -7,13 +9,13 @@
 }
 
 window#waybar{
-    background: #282a36;
-    color: #f8f8f2;
+    background: @background;
+    color: @foreground;
 }
 
 #window {
     font-family: "Hack";
-    color: #f8f8f2;
+    color: @foreground;
 }
 
 #workspaces button {
@@ -21,16 +23,16 @@ window#waybar{
     background: transparent;
     font-family: "Hack";
     font-weight: bold;
-    color: #f8f8f2;
+    color: @foreground;
 }
 
 #workspaces button.focused {
-    color: #f8f8f2;
-    background: #bd93f9;
+    color: @foreground;
+    background: @purple;
 }
 
 #mode {
-    color: lightgreen;
+    color: @green;
 }
 
 #clock, #battery, #cpu, #memory, #network, #pulseaudio, #idle_inhibitor, #tray, #workspaces, #window {
@@ -42,19 +44,20 @@ window#waybar{
     font-weight: bold;
 }
 
-#battery {
+#battery.full {
+    color: @purple;
 }
 
 #battery.charging:not(.full) {
-    color: lightgreen;
+    color: @green;
 }
 
 #battery.warning:not(.charging) {
-    color: yellow;
+    color: @yellow;
 }
 
 #battery.critical:not(.charging) {
-    color: red;
+    color: @red;
 }
 
 #cpu {
@@ -79,5 +82,5 @@ window#waybar{
 }
 
 #idle_inhibitor.activated {
-    color: #bd93f9;
+    color: @purple;
 }
