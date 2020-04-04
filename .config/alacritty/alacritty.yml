@@ -94,7 +94,7 @@ colors:
   #
   indexed_colors: []
 
-background_opacity: 0.8
+background_opacity: 1
 
 env:
         TERM: xterm-256color
@@ -104,8 +104,8 @@ window:
                 columns: 0
                 lines:  0
         padding:
-                x: 10
-                y: 10
+                x: 20
+                y: 20
         dynamic_padding: false
         decorations: full
 
@@ -114,6 +114,6 @@ tabspace: 4
 draw_bold_text_with_bright_colors: true
 
 mouse:
-        hidden_when_typing: true
+        hechidden_when_typing: true
 
 dynamic_title: true
