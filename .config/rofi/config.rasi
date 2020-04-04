@@ -7,14 +7,14 @@
 
 configuration {
     columns: 1;
-    width: 25;
-    lines: 10;
-    font: "Ubuntu Nerd Font 12";
+    width: 30;
+    lines: 12;
+    font: "Hack 14";
     //sidebar-mode: true;
     show-icons: true;
     terminal: "alacritty";
     disable-history: true;
-    display-drun: "Apps";
+    display-drun: "";
     drun-match-fields: "name,generic,exec,categories";
     levenshtein-sort: true;
     //matching: "fuzzy";
@@ -22,7 +22,7 @@ configuration {
 
 * {
     /* Base */
-    default-background: rgba(40, 42, 54, 80%); // <- change this for transparency
+    default-background: rgba(40, 42, 54, 100%); // <- change this for transparency
     default-foreground: rgba(248, 248, 242, 100%);
     default-border: rgba(189, 147, 249, 100%);
     alternative-background: rgba(40, 42, 54, 100%);
@@ -57,7 +57,8 @@ configuration {
 
 #mainbox {
     border:  0;
-    padding: 0;
+    padding: 5;
+
 }
 
 #message {
@@ -73,13 +74,13 @@ configuration {
 
 #listview {
     fixed-height: 0;
-    spacing: 2;
+    spacing: 5;
     scrollbar: false;
-    padding: 2 0 0;
+    padding: 0 0 0;
 }
 
 #element {
-    padding: 2;
+    padding: 3;
     border: 1;
     border-radius: 3;
     border-color: @invisible;
@@ -131,7 +132,7 @@ configuration {
 
 #inputbar {
     spacing: 0;
-    padding: 1;
+    padding: 5;
 }
 
 #case-indicator {

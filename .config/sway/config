@@ -10,13 +10,13 @@
 set
 {
 	$term			alacritty
-	$lock 			swaylock -e -i ~/.config/sway/bakaasta.png
-	$launcher		rofi  -show drun -hide-scrollbar
+	$lock 			swaylock -f -e -i ~/.config/sway/noelle2.png
+	$launcher		rofi  -show drun
 	$screenshot		grim ~/Bilder/screenshot-$(date +"%Y-%m-%d-%H-%M-%S").png
 }
 
 #--- Font ------------------------------------------------------------------
-set $font			Hack 16
+set $font			Hack 15
 
 #--- GUI -------------------------------------------------------------------
 set
@@ -36,7 +36,7 @@ set
 #--- Window Decortations ---------------------------------------------------
 set
 {
-   	$border      	2
+   	$border      	3
   	$nofocus     	#282a36
 	$focus       	#bd93f9
 	$titletxt    	#f8f8f2
@@ -63,7 +63,7 @@ set
 #]>#########################################################################
 
 #<[# OUTPUTS ###############################################################
-output "*" bg ~/.config/sway/bakaasta.png fill
+output "*" bg ~/.config/sway/noelle1.png fill
 
 #]>#########################################################################
 
@@ -81,9 +81,10 @@ input "1739:10036:Synaptics_s3203"
 #<[# STARTUP ###############################################################
 exec swayidle -w \
 	timeout 300 	'$lock' \
-        timeout 600	'swaymsg "output * dpms off"' \
-        resume		'swaymsg "output * dpms on"' \
-        before-sleep	'$lock'
+    timeout 600	'swaymsg "output * dpms off"' \
+	resume		'swaymsg "output * dpms on"' \
+	timeout 900 'systemctl suspend'\
+    before-sleep	'$lock'
 
 exec_always
 {
