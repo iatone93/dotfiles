@@ -14,7 +14,7 @@ set
 {
 	$term			alacritty
 	$lock 			swaylock -f -e -i ~/.config/sway/noelle_lock.png
-	$launcher		wofi --show drun -f -I -i
+	$launcher		wofi -f
 	$screenshot		grim ~/Bilder/screenshot-$(date +"%Y-%m-%d-%H-%M-%S").png
 }
 
@@ -39,13 +39,13 @@ set
 #--- Window Decortations ---------------------------------------------------
 set
 {
-   	$border      	3
+   	$border      	5
   	$nofocus     	$background
 	$focus       	$purple
 	$titletxt    	$foreground
 	$titlepad    	10
 	$gaps_inner  	20
-	$gaps_outer  	0
+	$gaps_outer  	10
 }
 
 #--- Workspace Names -------------------------------------------------------
@@ -129,21 +129,15 @@ titlebar_padding $titlepad $titlepad
 title_align center
 
 #--- Default Borders -------------------------------------------------------
-default_floating_border	normal $border
-default_border			pixel  $border
+default_floating_border	pixel	$border
+default_border			pixel	$border
 
 #]>#########################################################################
 
 #<[# SPECIAL WINDOW RULES ##################################################
 #--- Floating Rules --------------------------------------------------------
-for_window [title="Anki"] floating enable
-for_window [title="Bitwarden"] floating enable
-for_window [title="Laufwerke"] floating enable
-for_window [title="mpv"] floating enable
-for_window [title="imv"] floating enable
-for_window [title="Steam"] floating enable
-for_window [title="Alacritty"] floating enable
-for_window [title="Taschenrechner"] floating enable
+for_window [app_id="mpv"] floating enable
+for_window [app_id="imv"] floating enable
 
 #--- Workspace Assignment --------------------------------------------------
 

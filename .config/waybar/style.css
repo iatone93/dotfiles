@@ -14,15 +14,13 @@ window#waybar{
 }
 
 #window {
-    font-family: "Hack";
     color: @foreground;
 }
 
 #workspaces button {
     padding: 0 15px;
     background: transparent;
-    font-family: "Hack";
-    font-weight: bold;
+    /*font-weight: bold;*/
     color: @foreground;
 }
 
@@ -41,7 +39,6 @@ window#waybar{
 }
 
 #clock {
-    font-weight: bold;
 }
 
 #battery.full {
