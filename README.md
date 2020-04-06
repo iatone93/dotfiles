@@ -1,7 +1,8 @@
 # dotfiles
 * **wm**: sway
 * **bar**: waybar
-* **launcher**: rofi
+* **launcher**: wofi
 * **open**: nnn imv neofetch spotify
 ***
+(old)
 ![Noelle](sway_noelle.png)
